@@ -1,0 +1,124 @@
+.Wrap {
+    overflow: hidden;
+}
+
+.header {
+    line-height: 100px;
+    border-bottom: 1px solid #ddd;
+
+    .inner {
+        display: flex;
+        justify-content: space-between;
+        width: 1200px;
+        margin: 0 auto;
+
+        h1 {
+            font-size: 0;
+
+            img {
+                height: 100px;
+            }
+        }
+
+        .gnb {
+            &>ul {
+                display: flex;
+                gap: 40px;
+
+                &>li {
+                    position: relative;
+                    text-align: center;
+                    font-size: 18px;
+
+                    &>a {
+                        display: block;
+                    }
+
+                    ul {
+                        position: absolute;
+                        top: 101px;
+                        left: 50%;
+                        transform: translate(-50%, 0);
+                        display: none;
+                        background: #fff;
+                        z-index: 999;
+
+                        &>li {
+                            width: 150px;
+                            line-height: 40px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+                &>li:hover {
+                    ul {
+                        display: block;
+
+                    }
+                }
+            }
+        }
+
+        .h_link {
+            font-size: 20px;
+            cursor: pointer;
+
+            &>* {
+                margin: 0 0 0 10px;
+            }
+
+            .cart {
+                vertical-align: 2px;
+            }
+        }
+    }
+}
+
+.MainVisual {
+    position: relative;
+
+    .slick-track,
+    .slick-list {
+        transition-delay: 0.03s;
+    }
+
+    .itm {
+        height: 700px;
+    }
+
+    @for $i from 1 to 4 {
+        .itm0#{$i} {
+            background: url(../../public/image/mainvisual0#{$i}.jpg) no-repeat center center/cover;
+        }
+    }
+
+    .arrows {
+        color: #000;
+        font-size: 150px;
+
+        .left {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            margin: 0 0 0 -750px;
+        }
+
+        .right {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            margin: 0 0 0 750px;
+        }
+    }
+
+    .dots {}
+
+
+
+
+}

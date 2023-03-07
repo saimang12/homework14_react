@@ -36,7 +36,7 @@
 
                     ul {
                         position: absolute;
-                        top: 101px;
+                        top: 100px;
                         left: 50%;
                         transform: translate(-50%, 0);
                         display: none;
@@ -47,6 +47,20 @@
                             width: 150px;
                             line-height: 40px;
                             font-size: 14px;
+
+                            a {
+                                display: block;
+                            }
+
+                            &:hover>a {
+                                background: #555;
+                                color: #fff;
+                            }
+
+                        }
+
+                        li~li {
+                            border-top: 1px solid #ddd;
                         }
                     }
                 }
@@ -96,6 +110,7 @@
     .arrows {
         color: #000;
         font-size: 150px;
+        cursor: pointer;
 
         .left {
             position: absolute;
@@ -116,9 +131,138 @@
         }
     }
 
-    .dots {}
+    .dots {
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        transform: translate(-50%, 0);
 
+        button {
+            border: none;
+            background: #fff;
+            width: 20px;
+            height: 20px;
+            font-size: 0;
+            margin: 0 3px;
+            border-radius: 50%;
+            cursor: pointer;
 
+            &.on {
+                background: tomato;
+            }
+        }
+    }
+}
 
+.MainContents {
+    padding: 100px 0;
 
+    .title {
+        text-align: center;
+        margin: 0 0 30px 0;
+
+        .MainConHand {
+            font-size: 70px;
+            margin: 0 0 10px 0;
+            color: #b9002c;
+        }
+
+        h2 {
+            font-size: 35px;
+            font-weight: 700;
+        }
+    }
+
+    .inner {
+        width: 1200px;
+        margin: 0 auto;
+
+        .line {
+            position: relative;
+            margin: 0 0 30px 0;
+            height: 1px;
+        }
+
+        .line::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            width: 100%;
+            height: 1px;
+            background: #b9002c;
+        }
+
+        .line::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 10px;
+            height: 10px;
+            background: #b9002c;
+            border-radius: 50%;
+        }
+
+        .MainConSlide {
+            margin: 0 -14px 30px -15px;
+            text-align: center;
+
+            .itm {
+                padding: 0 15px;
+
+                figure {
+                    margin: 0 0 20px 0;
+                }
+
+                p {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .dots {
+            text-align: center;
+
+            button {
+                border: none;
+                background: rgba(0, 0, 0, 0.5);
+                margin: 0 3px;
+                font-size: 0;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+
+                cursor: pointer;
+
+                &.on {
+                    background: tomato;
+                }
+            }
+        }
+
+        .SlideWrapper {
+            position: relative;
+
+            .arrows {
+
+                .left {
+                    position: absolute;
+                    top: 100px;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    margin: 0 0 0 -650px;
+                }
+
+                .right {
+                    position: absolute;
+                    top: 100px;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    margin: 0 0 0 650px;
+                }
+            }
+        }
+    }
 }

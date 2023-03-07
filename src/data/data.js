@@ -22,3 +22,14 @@ export const MAIN_SLIDE = [
     { id: 2 },
     { id: 3 },
 ]
+
+export const SUB_SLIDE = [
+    { id: 1, title: '용인 행정타운점', },
+    { id: 2, title: '진주 경상대', },
+    { id: 3, title: '하이 스마일헬로우', },
+    { id: 4, title: '부산 시청점', },
+    { id: 5, title: '대구 봉산점', },
+    { id: 6, title: '대구 사수점', },
+    { id: 7, title: '대구 신천점', },
+    { id: 8, title: '창원 행암점', },
+]

@@ -1,10 +1,10 @@
 import MainConSlide from "react-slick";
 import "slick-carousel/slick/slick.css";
-import { FaRegHandshake } from "react-icons/fa";
+import { FaRegHandshake, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { useRef, useState } from "react";
 
 const MainContents = ({ SUB_SLIDE }) => {
-    const [num, setNum] = useState(1)
+    const [num, setNum] = useState(0)
     const ConSlide = useRef(null)
     const option = {
         slidesToShow: 4,
@@ -37,19 +37,19 @@ const MainContents = ({ SUB_SLIDE }) => {
                     </MainConSlide>
 
                     <ul className="arrows">
-                        <li className="left" onClick={() => { ConSlide.current.slickPrev() }}>123</li>
-                        <li className="right" onClick={() => { ConSlide.current.slickNext() }}>213</li>
+                        <li className="left" onClick={() => { ConSlide.current.slickPrev() }}><FaArrowLeft /></li>
+                        <li className="right" onClick={() => { ConSlide.current.slickNext() }}><FaArrowRight /></li>
                     </ul>
                 </div>
                 <div className="dots">
                     {SUB_SLIDE.slice(0, 1).map((it, idx) => {
                         return (
-                            <button className={num === it.id ? 'on' : ''} key={idx} onClick={() => { ConSlide.current.slickGoTo(it.id) }}>{it.id}</button>
+                            <button className={num + 1 === it.id ? 'on' : ''} key={idx} onClick={() => { ConSlide.current.slickGoTo(it.id - 1) }}>{it.id}</button>
                         )
                     })}
                     {SUB_SLIDE.slice(4, 5).map((it, idx) => {
                         return (
-                            <button className={num === it.id ? 'on' : ''} key={idx} onClick={() => { ConSlide.current.slickGoTo(it.id) }}>{it.id}</button>
+                            <button className={num + 1 === it.id ? 'on' : ''} key={idx} onClick={() => { ConSlide.current.slickGoTo(it.id - 1) }}>{it.id}</button>
                         )
                     })}
                 </div>

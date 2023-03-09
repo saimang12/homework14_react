@@ -1,14 +1,14 @@
 import { BsHandThumbsUpFill, BsFillMapFill, BsFillCheckSquareFill } from "react-icons/bs";
 
 export const BASIC = {
-    company: '주식회사 동양정수커피',
-    name: '문은경',
-    number: '516-87-00388',
-    tel: '1544-6246',
-    email: 'moonkye72@naver.com',
-    address: '본사:  대구 북구 노원로40길 7-3. 1층(침산동)',
-    sub_adress: '대구광역시 동구 신성로16 (신천동)ㅣfinger coffee',
-    copy: '2023 핑거커피 All rights reserved.',
+    company: '주식회사 서양아커피',
+    name: '대표자이름',
+    number: '536-87123-00188',
+    tel: '1541-6027',
+    email: 'tiger@daum.net',
+    address: '본사:대구 마구 사이로40길 7+3. 11층(침식동)',
+    sub_adress: '직영점:머구특별시 동구 신상로16 (신동)ㅣfinger coffee',
+    copy: '1977 핑거음료 All rights reserved.',
 }
 
 export const GNB = [

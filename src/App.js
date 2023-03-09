@@ -4,7 +4,10 @@ import MainInfo from "./component/MainInfo";
 import MainMovie from "./component/MainMovie";
 import MainProduct from "./component/MainProduct";
 import MainVisual from "./component/MainVisual";
+import Footer from "./component/Footer";
+import ToTop from "./component/ToTop";
 import { GNB, MAIN_SLIDE, SUB_SLIDE, BASIC, MAIN_INFO } from "./data/data";
+
 
 const App = () => {
     return (
@@ -15,6 +18,8 @@ const App = () => {
             <MainMovie />
             <MainProduct BASIC={BASIC} />
             <MainInfo MAIN_INFO={MAIN_INFO} />
+            <Footer BASIC={BASIC} />
+            <ToTop />
         </div>
     )
 }

@@ -37,9 +37,9 @@ const ToTop = () => {
 
     useEffect(() => {
         window.addEventListener('scroll', scrollHandler);
-        return (
-            window.removeEventListener('scroll', scrollHandler)
-        )
+        // return (
+        //     window.removeEventListener('scroll', scrollHandler)
+        // )
     }, [])
 
     const ToTopHandler = () => {
